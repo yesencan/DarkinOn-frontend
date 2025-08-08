@@ -652,7 +652,7 @@ MATQADLMELDMAMEPDRKAAVSHWQQQSYLDSGIHSGATTTAPSLSGKGNPEEEDVDTSQVLYEWEQGFSQSFTQEQVA
         <Section>
           <Paragraph style={{ marginTop: 0 }}>
             DarkinOn, built on top of the model with the same name, is a web service that predicts kinases acting on a phosphorylation site in a protein sequence.
-            DarkinOn transfers knowledge from kinases with many known target phosphosites to those kinases with no known sites through a zero-shot learning model, to enable prediction of these unknown kinases.
+            DarkinOn transfers knowledge from kinases with many known target phosphosites to those kinases with no known sites through an any-shot learning model, to enable prediction of these unknown kinases.
           </Paragraph>
         </Section>
         </ContentContainer>
