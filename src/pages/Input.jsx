@@ -8,7 +8,32 @@ import { PulseLoader } from "react-spinners";
 import Popup from "reactjs-popup";
 import ScanCheckboxGroup from "../components/Launch/Checkbox";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "http://127.0.0.1:5000/api";
+
+const ContentContainer = styled.div`
+  font-family: "Arial", sans-serif;
+  margin: 30px 0 30px 0;
+  color: #333;
+  padding: 60px 0 0 0;
+  background-color: #f7fbff;
+  grid-column: 3 / 7;
+`;
+
+const Section = styled.section`
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+`;
+
+const Paragraph = styled.p`
+  color: #424242;
+  line-height: 1.6;
+  margin: 0;
+  margin-top: 15px;
+`;
+
 const Tooltip = styled.div`
   background: rgba(135, 135, 135, 0.9);
   width: 15vw;
@@ -24,14 +49,15 @@ const Container = styled.div`
   display: grid;
   background-color: #f7fbff;
   grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
-  grid-template-rows: 70px 70px 40px calc(33% - 30px) calc(33% - 30px) calc(
+  /* grid-template-rows: 70px 70px 40px calc(33% - 30px) calc(33% - 30px) calc(
       33% - 30px
-    );
+    ); */
 `;
 
 const TabContainer = styled.div`
   grid-column: 3 / 7;
-  grid-row: 3 / 4;
+  /* grid-row: 3 / 4; */
+  margin-top: 10px;
   width: 100%;
   height: 40px;
   display: flex;
@@ -211,13 +237,14 @@ const ErrorMessagePre = styled.pre`
   box-sizing: border-box;
   border-radius: 5px;
   border-left: 5px solid red;
-  color: red;
+  color: black;
   background-color: #f7d5d5;
   display: flex;
   align-items: center;
   padding-left: 20px;
   font-family: "Roboto";
   font-size: 14px;
+  padding: 10px;
 `;
 
 const InputPage = () => {
@@ -621,6 +648,14 @@ MATQADLMELDMAMEPDRKAAVSHWQQQSYLDSGIHSGATTTAPSLSGKGNPEEEDVDTSQVLYEWEQGFSQSFTQEQVA
   return (
     <Container>
       {errorOpen ? <ErrorMessagePre>{errorMessage}</ErrorMessagePre> : null}
+      <ContentContainer>
+        <Section>
+          <Paragraph style={{ marginTop: 0 }}>
+            DarkinOn, built on top of the model with the same name, is a web service that predicts kinases acting on a phosphorylation site in a protein sequence.
+            DarkinOn transfers knowledge from kinases with many known target phosphosites to those kinases with no known sites through a zero-shot learning model, to enable prediction of these unknown kinases.
+          </Paragraph>
+        </Section>
+        </ContentContainer>
       <TabContainer>
         <Tab active={activeTab === 1} onClick={() => handleTabClick(1)}>
           Uniprot ID
