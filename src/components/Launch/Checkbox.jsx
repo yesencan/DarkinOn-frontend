@@ -55,7 +55,6 @@ function ScanCheckboxGroup() {
         <ScanCheckbox label="Serine (S)" defaultChecked />
         <ScanCheckbox label="Threonine (T)" defaultChecked />
         <ScanCheckbox label="Tyrosine (Y)" defaultChecked />
-        <ScanCheckbox label="Histidine (H)" defaultChecked />
       </CheckboxContainer>
     </>
   );
