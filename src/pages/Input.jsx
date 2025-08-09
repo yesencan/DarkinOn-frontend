@@ -442,7 +442,7 @@ MATQADLMELDMAMEPDRKAAVSHWQQQSYLDSGIHSGATTTAPSLSGKGNPEEEDVDTSQVLYEWEQGFSQSFTQEQVA
 
   async function handlePredictClick2() {
     setIsPredicting(true);
-    const aminoacids = ["S", "T", "Y", "H"].filter((acid, index) => {
+    const aminoacids = ["S", "T", "Y"].filter((acid, index) => {
       return document.querySelectorAll('input[type="checkbox"]')[index].checked;
     });
 
@@ -545,7 +545,7 @@ MATQADLMELDMAMEPDRKAAVSHWQQQSYLDSGIHSGATTTAPSLSGKGNPEEEDVDTSQVLYEWEQGFSQSFTQEQVA
   async function handlePredictLoadedFile() {
     setIsPredicting(true);
 
-    const aminoacids = ["S", "T", "Y", "H"].filter((acid, index) => {
+    const aminoacids = ["S", "T", "Y"].filter((acid, index) => {
       return document.querySelectorAll('input[type="checkbox"]')[index].checked;
     });
 
