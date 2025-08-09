@@ -8,7 +8,7 @@ import { PulseLoader } from "react-spinners";
 import Popup from "reactjs-popup";
 import ScanCheckboxGroup from "../components/Launch/Checkbox";
 
-const API_URL = "http://127.0.0.1:5000/api";
+const API_URL = "http://134.149.216.67:8080/api";
 
 const ContentContainer = styled.div`
   font-family: "Arial", sans-serif;
