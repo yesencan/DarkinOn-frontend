@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Usage
+
+Update the variable API_URL variable in the file ```src/pages/Input.jsx``` with the URL that the backend API listens to.
 ## Available Scripts
 
 In the project directory, you can run:
