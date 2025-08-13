@@ -8,7 +8,7 @@ import { PulseLoader } from "react-spinners";
 import Popup from "reactjs-popup";
 import ScanCheckboxGroup from "../components/Launch/Checkbox";
 
-const API_URL = "https://darkinon.ovh/api";
+const API_URL = `${process.env.REACT_APP_API_URL}/api`;
 
 const ContentContainer = styled.div`
   font-family: "Arial", sans-serif;
