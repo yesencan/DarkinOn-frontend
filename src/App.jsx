@@ -6,7 +6,6 @@ import Footer from "./components/Launch/Footer";
 import Output from "./pages/Output";
 import Input from "./pages/Input";
 import OutputDataContext from './contexts/OutputDataContext';
-import AboutPage from "./pages/About";
 import TutorialPage from "./pages/Tutorial";
 
 const App = () => {
@@ -20,7 +19,6 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Input />} />
               <Route path="/results" element={<Output />} />
-              <Route path="/about" element={<AboutPage />} />
               <Route path="/tutorial" element={<TutorialPage />} />
             </Routes>
           </div>
