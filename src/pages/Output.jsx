@@ -381,7 +381,6 @@ const Output = () => {
     const handleClickOutside = (event) => {
       let clickedInsideInput = false;
       Object.values(searchContainerRefs).forEach((ref) => {
-        console.log(ref.current.children[1]?.children[1]?.value);
         if (ref.current) {
           if (
             event.target.tagName === "INPUT" &&

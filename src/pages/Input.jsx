@@ -353,7 +353,6 @@ MATQADLMELDMAMEPDRKAAVSHWQQQSYLDSGIHSGATTTAPSLSGKGNPEEEDVDTSQVLYEWEQGFSQSFTQEQVA
       // Push the object into the resulting array
       geneList.push(obj);
     });
-    console.log(geneList)
     const apiEndpoint = `${API_URL}/predict/gene-id`;
 
     try {
@@ -433,7 +432,6 @@ MATQADLMELDMAMEPDRKAAVSHWQQQSYLDSGIHSGATTTAPSLSGKGNPEEEDVDTSQVLYEWEQGFSQSFTQEQVA
 
       setOutputData(data.results);
       navigate("/results");
-      console.log("sevval", data.results);
     } catch (error) {
       setIsPredicting(false);
       console.error("There was an error with the prediction request:", error);
@@ -447,7 +445,6 @@ MATQADLMELDMAMEPDRKAAVSHWQQQSYLDSGIHSGATTTAPSLSGKGNPEEEDVDTSQVLYEWEQGFSQSFTQEQVA
     });
 
     if (proteinSequenceInputText) {
-      console.log(proteinSequenceInputText);
       if (aminoacids.length === 0) {
         setIsPredicting(false);
         enableErrorMessage("Please select at least one amino acid to scan for.");
@@ -471,9 +468,7 @@ MATQADLMELDMAMEPDRKAAVSHWQQQSYLDSGIHSGATTTAPSLSGKGNPEEEDVDTSQVLYEWEQGFSQSFTQEQVA
         const result = await response.json();
         if (!response.ok) {
           setOmitErrors(true);
-          console.log(omitErrors)
           const error = result["error"];
-          console.log(result["invalid_ids"])
           switch (error) {
             case "invalid_aa_seq":
               if (result["invalid_ids"].length > 2) {
@@ -531,7 +526,6 @@ MATQADLMELDMAMEPDRKAAVSHWQQQSYLDSGIHSGATTTAPSLSGKGNPEEEDVDTSQVLYEWEQGFSQSFTQEQVA
         }
         setOutputData(result.results); // This updates the context
         navigate("/results");
-        console.log("eb", result);
       } catch (error) {
         setIsPredicting(false);
         console.error("Error predicting sequence from text:", error);
@@ -633,9 +627,7 @@ MATQADLMELDMAMEPDRKAAVSHWQQQSYLDSGIHSGATTTAPSLSGKGNPEEEDVDTSQVLYEWEQGFSQSFTQEQVA
         }
 
         setOutputData(result.results);
-        console.log("result:", result.results);
         navigate("/results");
-        console.log(result);
       } catch (error) {
         setIsPredicting(false);
         console.error("Error predicting sequence from file:", error);
